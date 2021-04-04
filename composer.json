@@ -1,6 +1,6 @@
 {
-    "name": "laminas/laminas-cache",
-    "description": "Caching implementation with a variety of storage options, as well as codified caching strategies for callbacks, classes, and output",
+    "name": "geste/laminas-cache",
+    "description": "Replacement until laminas can handle php 8 - Caching implementation with a variety of storage options, as well as codified caching strategies for callbacks, classes, and output",
     "license": "BSD-3-Clause",
     "keywords": [
         "laminas",
@@ -32,7 +32,7 @@
         }
     },
     "require": {
-        "php": "^5.6 || ^7.0",
+        "php": ">=8",
         "laminas/laminas-eventmanager": "^2.6.3 || ^3.2",
         "laminas/laminas-servicemanager": "^2.7.8 || ^3.3",
         "laminas/laminas-stdlib": "^3.2.1",
@@ -41,12 +41,6 @@
         "psr/simple-cache": "^1.0"
     },
     "require-dev": {
-        "cache/integration-tests": "^0.16",
-        "laminas/laminas-coding-standard": "~1.0.0",
-        "laminas/laminas-serializer": "^2.6",
-        "laminas/laminas-session": "^2.7.4",
-        "phpbench/phpbench": "^0.13",
-        "phpunit/phpunit": "^5.7.27 || ^6.5.8 || ^7.1.2"
     },
     "provide": {
         "psr/cache-implementation": "1.0",
@@ -96,6 +90,7 @@
         "test-coverage": "phpunit --colors=always --coverage-clover clover.xml"
     },
     "replace": {
-        "zendframework/zend-cache": "self.version"
+        "zendframework/zend-cache": "self.version",
+        "laminas/laminas-cache": "2.9.0"
     }
 }
